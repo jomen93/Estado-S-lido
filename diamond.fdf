@@ -1,0 +1,99 @@
+SystemName          Diamond
+SystemLabel         C
+NumberOfAtoms       2
+NumberOfSpecies     1
+
+%block ChemicalSpeciesLabel
+ 1  6 Carbono        
+%endblock ChemicalSpeciesLabel
+
+LatticeConstant         3.570469799459459 Ang
+%block LatticeVectors
+ 0.00  0.50  0.50
+ 0.50  0.00  0.50
+ 0.50  0.50  0.00  
+%endblock LatticeVectors
+
+AtomicCoordinatesFormat  ScaledByLatticeVectors
+%block AtomicCoordinatesAndAtomicSpecies
+ 0.00  0.00  0.00  1
+ 0.25  0.25  0.25  1
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+
+%block kgrid_Monkhorst_Pack
+ 4  0  0  0.5 
+ 0  4  0  0.5
+ 0  0  4  0.5
+%endblock kgrid_Monkhorst_Pack
+
+#parametros para mejorar la energia de #cohesion
+
+WriteCoorXmol .true.
+#SpinPolarized .true.
+Spin polarized
+Spin.Fix .true.
+#SCFMustConverge .true.
+#FixAuxiliaryCell .true.
+#PAO.BasisType nodes
+#PAO.SoftDefault .true.
+
+
+
+DM.UseSaveDM        .true.
+
+WriteDenchar            .true.       # Write information for DENCHAR
+WriteWaveFunctions T
+%block WaveFuncKPoints
+0.0 0.0 0.0 from 1 to 5
+%endblock WaveFuncKPoints
+
+
+#  *************************************************************************
+#                     Input variables for Denchar
+#  (besides SystemLabel, NumberOfSpecies and ChemicalSpecies, defined above)
+#  *************************************************************************
+
+Denchar.TypeOfRun      3D
+
+Denchar.PlotCharge          .true.
+Denchar.PlotWaveFunctions   .true.
+
+Denchar.CoorUnits       Ang           # Format for coordinate of the points
+                                       # Bohr
+                                       # Ang
+
+Denchar.DensityUnits   Ele/Ang**3     # Units of Charge Density
+                                       # Ele/bohr**3
+                                       # Ele/Ang**3
+                                       # Ele/UnitCell
+
+Denchar.MinX           -5.0  bohr      # Minimum coord of the window in X-dir
+Denchar.MaxX            5.0  bohr      # Maximum coord of the window in X-dir
+
+Denchar.MinY           -5.0  bohr      # Minimum coord of the window in Y-dir
+Denchar.MaxY            5.0  bohr      # Maximum coord of the window in Y-dir
+
+Denchar.MinZ           -5.0  bohr      # Minimum coord of the window in Y-dir
+Denchar.MaxZ            5.0  bohr      # Maximum coord of the window in Y-dir
+
+Denchar.NumberPointsX    40            # Number of points in X-axis
+Denchar.NumberPointsY    40            # Number of points in Y-axis
+Denchar.NumberPointsZ    40            # Number of points in Y-axis
+
+Denchar.PlaneGeneration  NormalVector      # Option to generate the plane
+                                                 # NormalVector
+                                                 # TwoLine
+                                                 # ThreePoints
+                                                 # ThreeAtomicIndices
+#%block Denchar.Indices3Atoms                # Indices of three atoms
+#   1  2  3
+#%endblock Denchar.Indices3Atoms
+
+
+
+	
+
+
+
+

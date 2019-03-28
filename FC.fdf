@@ -1,0 +1,21 @@
+NumberOfAtoms           2
+
+LatticeConstant    6.7472127463  Bohr
+
+%block LatticeVectors
+   0.0000000000     0.5000000000     0.5000000000
+   0.5000000000     0.0000000000     0.5000000000
+   0.5000000000     0.5000000000     0.0000000000
+%endblock LatticeVectors
+
+AtomicCoordinatesFormat  NotScaledCartesianBohr
+
+%block AtomicCoordinatesAndAtomicSpecies
+   0.0000000000     0.0000000000     0.0000000000      1
+   1.6868031866     1.6868031866     1.6868031866      1
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+MD.TypeOfRun           FC
+MD.FCfirst              1
+MD.FClast               2
+MD.FCdispl             0.0400000000  Bohr

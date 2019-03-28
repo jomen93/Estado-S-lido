@@ -1,0 +1,24 @@
+SystemName          Diamond
+SystemLabel         C
+NumberOfAtoms                       < FC.fdf
+NumberOfSpecies     1
+
+%block ChemicalSpeciesLabel
+ 1  6 Carbono        
+%endblock ChemicalSpeciesLabel
+
+
+LatticeConstant                     < FC.fdf
+LatticeVectors                      < FC.fdf
+
+AtomicCoordinatesFormat             < FC.fdf
+AtomicCoordinatesAndAtomicSpecies   < FC.fdf	
+
+kgrid_cutoff        8.0 Ang
+MeshCutoff          200 Ry
+PAO.BasisSize       SZ
+
+MD.TypeOfRun                        < FC.fdf
+MD.FCfirst                          < FC.fdf
+MD.FClast                           < FC.fdf
+MD.FCdispl                          < FC.fdf

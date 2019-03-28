@@ -1,0 +1,40 @@
+SystemName           Diamond
+SystemLabel          C
+
+NumberOfAtoms        2
+LatticeConstant      3.570469799459459  Ang
+
+%block LatticeVectors
+0.00 0.50 0.50        
+0.50 0.00 0.50
+0.50 0.50 0.00
+%endblock LatticeVectors
+
+AtomicCoordinatesFormat   ScaledCartesian
+
+%block AtomicCoordinatesAndAtomicSpecies
+ 0.125   0.125   0.125  1   28.086
+-0.125  -0.125  -0.125  1   28.086
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+kgrid_cutoff         10.0 Ang
+
+#SuperCell_1          1
+#SuperCell_2          1
+#SuperCell_3          1
+
+AtomicDispl          0.4  Bohr
+
+BandLinesScale       pi/a
+%block BandLines
+ 1  2.000  2.000  2.000  \Gamma
+15  2.000  0.000  0.000       X
+25  0.000  0.000  0.000  \Gamma
+20  1.000  1.000  1.000       L
+20  2.000  0.000  0.000       X
+15  2.000  1.000  0.000       W
+20  1.000  1.000  1.000       L
+%endblock BandLines
+
+#Eigenvectors         True
+
